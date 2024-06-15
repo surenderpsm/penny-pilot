@@ -1,0 +1,125 @@
+html{
+    min-width: 320px; 
+    min-height: 800px;
+}
+#root{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DBHighlight {
+    display: flex;
+}
+
+.DBHighlight div {
+    /* margin:auto; */
+    /* min-width: 128px;
+    max-width: 490px; */
+    padding: 0 25px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 4px 0.25px #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.DBHighlight blockquote {
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+    justify-content: center;
+}
+
+.DBalign-center{
+    text-align: center;
+    color: var(--color-subtitle-gray);
+    margin:0;
+    font-size: 0.75em;
+}
+.DBalign-left{
+    text-align: left;
+    font-size: 1.25em;
+    margin: 20px 0;
+}
+.DBalign-right {
+    text-align: right;
+    font-size: 0.8em;
+    margin: 20px 0;
+    color:var(--color-subtitle-lightgray)
+}
+
+.DBHighlight span {
+    display: block;
+    text-align: center;
+    font-size: 4em;
+}
+
+
+.DBExpenseAdd {
+    display: flex;
+}
+
+.DBExpenseAdd div {
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+
+.DBinput-container{
+    margin:10px;
+}
+
+.DBinput-container input{
+    display: block;
+    position: relative;
+    margin:1px;
+}
+
+.DBinput-container button{
+    display: block;
+    position: relative;
+    margin:10px;
+}
+
+@media (min-width:320px )  { /* smartphones, iPhone, portrait 480x320 phones */ 
+    .DBHighlight {
+        flex-direction: column;
+        /* align-items: center; */
+        margin: 0 25px;
+    }
+    .DBHighlight div {
+        margin: 10px;
+        width: 90%;
+        height: 40%;
+        font-size: 0.85em;
+    }
+    .DBExpenseAdd {
+        flex-direction: column;
+        box-shadow: 3px 5px 4px 0.25px #777;
+        border-radius: 10px;
+        background-color: red;
+
+        /* align-items: center; */
+    }
+}
+
+@media (min-width:650px) { /* big landscape tablets, laptops, and desktops */ 
+    .DBHighlight {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .DBHighlight div {
+        width: 45%;
+        height: 100%;
+        font-size: min(2vw, 1.5em);
+    }
+    .DBExpenseAdd {
+        flex-direction: row;
+        justify-content: center;
+        font-size: min(2vw, 1.5em);
+        box-shadow: 3px 5px 4px 0.25px #777;
+        border-radius: 10px;
+    }
+}
